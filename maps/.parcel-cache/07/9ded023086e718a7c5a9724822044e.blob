@@ -1,0 +1,5 @@
+var _User = require("./User");
+var _CustomMap = require("./CustomMap");
+const user = new _User.User();
+const map = new _CustomMap.CustomMap("map");
+map.addUserMarker(user);

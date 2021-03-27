@@ -1,0 +1,6 @@
+"use strict";
+
+var _User = require("./User");
+
+const user = new _User.User();
+console.log(user);

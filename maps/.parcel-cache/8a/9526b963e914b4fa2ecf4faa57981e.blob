@@ -1,0 +1,23 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.User = void 0;
+
+var _faker = _interopRequireDefault(require("faker"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class User {
+  constructor() {
+    this.name = _faker.default.name.firstName();
+    this.location = {
+      lat: parseFloat(_faker.default.address.latitude()),
+      lng: parseFloat(_faker.default.address.longitude())
+    };
+  }
+
+}
+
+exports.User = User;

@@ -1,0 +1,8 @@
+var _googleMaps = require("google-maps");
+new _googleMaps.google.maps.Map(document.getElementById("map"), {
+  zoom: 1,
+  center: {
+    lat: 0,
+    lng: 0
+  }
+});

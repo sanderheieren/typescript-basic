@@ -1,0 +1,23 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "User", function () {
+  return User;
+});
+var _faker = require("faker");
+var _fakerDefault = _parcelHelpers.interopDefault(_faker);
+class User {
+  // in order for typescript to point
+  // you to the true source of error, otherweise you will just see it in the index files
+  // (I added color to mappable). the implemnets is not required though, only to help
+  color = "red";
+  constructor() {
+    this.name = _fakerDefault.default.name.firstName();
+    this.location = {
+      lat: parseFloat(_fakerDefault.default.address.latitude()),
+      lng: parseFloat(_fakerDefault.default.address.longitude())
+    };
+  }
+  markerContent() {
+    return `<h1>User Name: ${this.name}</h1>`;
+  }
+}
